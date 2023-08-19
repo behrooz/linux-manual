@@ -33,3 +33,39 @@ systemd         1                               root  mem       REG             
 u/libcrypto.so.1.1
 
 ```
+
+# Examples 1:
+
+Return process list that has actively network communication on port 80
+
+```
+sudo lsof -i :80
+
+firefox-b   4245 tips   85u  IPv4 7385420      0t0  TCP tips-All-Series:48146->ec2-3-82-66-120.compute-1.amazonaws.com:http (ESTABLISHED)
+http      628048 _apt    3u  IPv4 8633336      0t0  TCP tips-All-Series:36386->40.114.136.21:http (ESTABLISHED)
+http      628049 _apt    3u  IPv4 8633335      0t0  TCP tips-All-Series:49536->50.7.87.83:http (CLOSE_WAIT)
+http      628050 _apt    3u  IPv4 8638476      0t0  TCP tips-All-Series:48198->50.7.87.82:http (ESTABLISHED)
+http      628051 _apt    3u  IPv4 8638477      0t0  TCP tips-All-Series:49526->50.7.87.83:http (CLOSE_WAIT)
+
+```
+
+# Example 2
+
+List processes using a special file
+```
+lsof /path/to/file
+
+```
+# Example 3:
+List all newtork connection
+```
+lsof -i
+```
+
+# Example 4:
+List all network connections for a specefic user
+```
+lsod -i -u username
+
+```
+
