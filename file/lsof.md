@@ -69,6 +69,9 @@ lsof -i -u username
 
 ```
 # Example 5:
+
+this one is my favorite and get list of open port in host computer
 ```
-lsof 
+lsof -i -n -P | grep LISTEN
+
 ```
