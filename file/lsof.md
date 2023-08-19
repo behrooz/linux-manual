@@ -3,6 +3,8 @@
 Linux/unix consider everything ad file, file is very importand in linux or unix
 lsof command stand for List Of Open file, this command list all open files
 
+An open file may be a regular file, a directory, a block special file, a character special file, an executing test refrence, a library, a stream, or a network file( Intenet socket, NFS file or UNIC domain socket.)
+
 simple sample like this
 ```
 pc@server:~$ sudo lsof | more
