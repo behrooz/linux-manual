@@ -65,7 +65,10 @@ lsof -i
 # Example 4:
 List all network connections for a specefic user
 ```
-lsod -i -u username
+lsof -i -u username
 
 ```
-
+# Example 5:
+```
+lsof 
+```
