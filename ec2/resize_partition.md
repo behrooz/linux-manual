@@ -1,7 +1,8 @@
 # Resize ec2 partition
-First go to ec2 volume and resize it to a size that you need
+To resize an EC2 partition, follow these steps:
 
-# First get the information
+# Get information
+First you need to gather information about ec2 instance volumes
 
 ```
 sudo lsblk
@@ -14,20 +15,20 @@ xvda      202:0    0  100G  0 disk
 xvdf      202:80   0  500G  0 disk 
 
 ```
-Here i want to increase / partition to 100G whitch currently is 60G
+Here you want to increase the size of root partition ("/") partition from current size of 60G to 100G
 Use the growpart command and specify the partition to extend
 
 ```
 sudo growpart /dev/xvda 1
 ```
 
-Then finilize your resizing with this command
+Then finalize your resizing proccess with this command
 
 ```
 sudo xfs_growfs -d /
 
 ```
-the result most be sth like this
+The result most be sth like this
 
 ```
 meta-data=/dev/xvda1             isize=512    agcount=16, agsize=1047040 blks
